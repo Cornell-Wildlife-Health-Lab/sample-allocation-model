@@ -1,0 +1,7 @@
+
+# local Python virtual environment
+.venv/
+
+# development environment
+.vscode/
+/data/
