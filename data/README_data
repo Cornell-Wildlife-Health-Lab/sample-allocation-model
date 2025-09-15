@@ -1,5 +1,5 @@
 The csv files included in this data folder are simulated example data. 
-Files with these names and formats are required to run main2.py, which will run 
+Files with these names and formats are required to run main.py, which will run 
 the specified model and generate results.
 
 
@@ -50,3 +50,4 @@ The file should include variables:
 - "unit_cost" : the cost to administer one CWD test (adding all costs such as 
                 personnel, test costs, procurement, etc.) in that geographic area; 
                 could be average cost or estimated. 
+
