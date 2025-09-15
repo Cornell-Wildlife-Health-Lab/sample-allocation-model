@@ -1,0 +1,52 @@
+The csv files included in this data folder are simulated example data. 
+Files with these names and formats are required to run main2.py, which will run 
+the specified model and generate results.
+
+
+The model parameters are defined in *mode.csv* and should have these variables, 
+with only 1 row to specify a model: 
+
+- "_model"	: string model name label
+
+- "mode_selection"	: numeric value 1, 2, or 3 to set the Model Mode
+
+- "budget" : total annual agency budget, supply numeric value with no characters, 
+             e.g. 200000 for a $200,000 budget.
+             
+- "stat_year"	: target year for the model, used for labeling purposes
+
+- "annual_growth_rate" : numeric value between 0 and 1. Defines the rate of spread of CWD
+
+
+
+The sub-administrative level information is captured in *SAM_input.csv*. 
+This file should have one row for each geographic area to be included in the model.
+The file should include variables:
+
+- "_id" :  a unique identifier that identifies the geographic unit, e.g. name, FIPS code, or other ID.
+
+- "include"	: TRUE or FALSE depending on whether to include that area in the model. 
+              Those with include == FALSE will not be included in the model.
+              
+- "MaxSample"	: The number of maximum samples that can be taken, e.g. sampling capacity, 
+                in that geographic area. Should be integer value.
+                
+- "Historical sampling - year1"	: Historical number of samples that were taken in 
+                                  the geographic area 1 year before the target year, 
+                                  i.e. the most recent year of sampling. Should be integer value.
+                                  
+- "Historical sampling - year2"	: Historical number of samples that were taken in
+                                  the geographic area 2 years before the target year. 
+                                  Should be integer value.
+                                  
+- "Historical sampling - year3"	: Historical number of samples that were taken in
+                                  the geographic area 3 years before the target year.
+                                  Should be integer value.
+                                  
+- "introduction_rate" : The introduction rate is the estimate rate of CWD introduction 
+                        into that area. Values should be greater than 0. If an 
+                        area has a risk of 0 it should be excluded from the model.
+                        
+- "unit_cost" : the cost to administer one CWD test (adding all costs such as 
+                personnel, test costs, procurement, etc.) in that geographic area; 
+                could be average cost or estimated. 
