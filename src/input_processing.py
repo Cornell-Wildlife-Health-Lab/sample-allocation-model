@@ -681,7 +681,7 @@ except FileNotFoundError:
 
 
 # get quotas by sub admin area
-subadmin_quotas = pd.DataFrame(hazards)[['subadminID', 'subadminName', 'totalQuota']]
+subadmin_quotas = pd.DataFrame(hazards)[['subadminID', 'totalQuota']]
 
 # proportion of quota allocated to each sub admin area
 subadmin_quotas['total_quota'] = subadmin_quotas['totalQuota'].sum()
